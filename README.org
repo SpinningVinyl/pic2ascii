@@ -43,4 +43,4 @@ With the =-l= option:
 [[./sample_output/long.png]]
 
 ** License
-GPLv2 or later. See =LICENSE.txt= for details.
+GPLv2 or later. See =LICENSE= for details.
