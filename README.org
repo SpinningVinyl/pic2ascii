@@ -19,9 +19,9 @@ python pic2asci.py [-h] [-o [OUTPUT]] [-w [WIDTH]] [-b | -s | -l] [-i] image
 - =-h= or =--help=: show the help message.
 
 The following three parameters are mutually exclusive:
-- =-s= or =--short=: use the short character set that displays 10 shades (=" .:-=+*%#@"=). This is the default setting.
-- =-l= or =--long=: use the long character set that displays 65 shades (=" `^\",:;!il~+_-?][}{1)(|\\/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$"=).
-- =-b= or =--blocky=: use Unicode characters 002591-002593 and 002588 to create so-called ANSI art in the "blocky" style (=" ░▒▓█"=).
+- =-s= or =--short=: use the short character set that displays 10 shades (~" .:-=+*%#@"~). This is the default setting.
+- =-l= or =--long=: use the long character set that displays 65 shades (~" `^\",:;!il~+_-?][}{1)(|\\/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$"~).
+- =-b= or =--blocky=: use Unicode characters 002591-002593 and 002588 to create so-called ANSI art in the "blocky" style (~" ░▒▓█"~).
 
 ** How to view the output
 It's best to use either a specialized ASCII art viewer or a text editor that allows you to adjust font size and line height. On macOS, the stock TextEdit.app produces good results with the following settings:
