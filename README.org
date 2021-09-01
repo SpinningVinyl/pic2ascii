@@ -40,7 +40,7 @@ With the =-b= option:
 [[./sample_output/blocky.png]]
 
 With the =-l= option:
-[[.sample_output/long.png]]
+[[./sample_output/long.png]]
 
 ** License
 GPLv2 or later. See =LICENSE.txt= for details.
