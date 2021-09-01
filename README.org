@@ -1,0 +1,46 @@
+* Pic2ascii -- turn your pictures into character art
+
+This is a very simple Python script that takes an image file and generates a text file containing character representation of the image.
+
+** Requirements
+- Python 3.6+
+- [[https://python-pillow.org/][Pillow]]
+
+** Usage
+#+BEGIN_EXAMPLE
+python pic2asci.py [-h] [-o [OUTPUT]] [-w [WIDTH]] [-b | -s | -l] [-i] image
+#+END_EXAMPLE
+
+*** Parameters
+- =image=: name of the image file to be processed.
+- =-o= or =--output=: output file name (if not specified, the script will use the same file name as the image file, but with the =.txt= extension; e.g. =pic001.png= → =pic001.txt=).
+- =-w= or =--width=: width of the output (in characters). If not specified, the width in characters will be the same as the pixel width of the input image.
+- =-i= or =--invert=: optimize for black text on white background (by default the script optimizes for white text on black background).
+- =-h= or =--help=: show the help message.
+
+The following three parameters are mutually exclusive:
+- =-s= or =--short=: use the short character set that displays 10 shades (=" .:-=+*%#@"=). This is the default setting.
+- =-l= or =--long=: use the long character set that displays 65 shades (=" `^\",:;!il~+_-?][}{1)(|\\/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$"=).
+- =-b= or =--blocky=: use Unicode characters 002591-002593 and 002588 to create so-called ANSI art in the "blocky" style (=" ░▒▓█"=).
+
+** How to view the output
+It's best to use either a specialized ASCII art viewer or a text editor that allows you to adjust font size and line height. On macOS, the stock TextEdit.app produces good results with the following settings:
+- Font: Menlo
+- Font size: 4 to 5 pt
+- Line height: 0.9 to 1.0
+
+** Known issues
+The script works by using characters with different densities to represent pixels of the original image depending on their values. The main issue is that it is very difficult to devise a sequence of characters that works well for representing grayscale in all fonts, since relative density of characters differs between fonts. That's why using the =-l= parameter is not really recommended, and =-b= typically produces the best results despite only representing black, white and 3 intermediate values.
+
+** Sample output
+With the =-s= option:
+[[./sample_output/short.png]]
+
+With the =-b= option:
+[[./sample_output/blocky.png]]
+
+With the =-l= option:
+[[.sample_output/long.png]]
+
+** License
+GPLv2 or later. See =LICENSE.txt= for details.
